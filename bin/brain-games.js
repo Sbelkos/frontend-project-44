@@ -7,4 +7,5 @@
 import { greeting, helloUser } from '../src/cli.js';
 
 greeting();
+
 helloUser();
