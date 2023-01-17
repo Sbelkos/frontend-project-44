@@ -1,9 +1,5 @@
-// import readlineSync from 'readline-sync';
+#!/usr/bin/env node
 
-import { greeting, helloUser } from '../src/cli.js';
+import playingEvenGame from '../src/games/1-even-game.js';
 
-greeting();
-
-helloUser();
-
-// console.log(userName);
+playingEvenGame();
