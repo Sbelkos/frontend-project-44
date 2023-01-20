@@ -1,40 +1,28 @@
-import readlineSync from 'readline-sync';
+import runEngine from '../index.js';
 
-const playingCalcGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
-    const multiFactorRandomNum = 50;
-    const genNumber1 = Math.floor(Math.random() * multiFactorRandomNum);
-    const genNumber2 = Math.floor(Math.random() * multiFactorRandomNum);
+import getRandomNumber from '../randomNumberGeneratre.js';
 
-    const arrayMathSign = ['+', '-', '*'];
-    const genRandomMathSign = arrayMathSign[Math.floor(Math.random() * arrayMathSign.length)];
-    const mathExpression = `${genNumber1} ${genRandomMathSign} ${genNumber2}`;
+const rules = 'What is the result of the expression?';
 
-    console.log(`Question: ${mathExpression}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (genRandomMathSign === '+' && Number(answer) === genNumber1 + genNumber2) {
-      console.log('Correct!');
-    } else if (genRandomMathSign === '+' && Number(answer) !== genNumber1 + genNumber2) {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${genNumber1 + genNumber2}'.\nLet's try again, ${userName}!`);
-    }
-
-    if (genRandomMathSign === '-' && Number(answer) === genNumber1 - genNumber2) {
-      console.log('Correct!');
-    } else if (genRandomMathSign === '-' && Number(answer) !== genNumber1 - genNumber2) {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${genNumber1 - genNumber2}'.\nLet's try again, ${userName}!`);
-    }
-
-    if (genRandomMathSign === '*' && Number(answer) === genNumber1 * genNumber2) {
-      console.log('Correct!');
-    } else if (genRandomMathSign === '*' && Number(answer) !== genNumber1 * genNumber2) {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${genNumber1 * genNumber2}'.\nLet's try again, ${userName}!`);
-    }
-  }
-
-  return console.log(`Congratulations, ${userName}!`);
+const calculatingNum = (num1, sign, num2) => {
+  if (sign === '+') return num1 + num2;
+  if (sign === '-') return num1 - num2;
+  if (sign === '*') return num1 * num2;
+  return new Error(`Unknown mathematical operation: '${sign}'!`);
 };
-export default playingCalcGame;
+
+const generateRound = () => {
+  const mathSign = ['+', '-', '*'];
+  const getMathSign = mathSign[getRandomNumber(0, mathSign.length - 1)];
+  const generateNumber1 = getRandomNumber(1, 50);
+  const generateNumber2 = getRandomNumber(1, 50);
+  const question = `${generateNumber1} ${getMathSign} ${generateNumber2}`;
+  const trueAnswer = String(calculatingNum(generateNumber1, getMathSign, generateNumber2));
+  return [question, trueAnswer];
+};
+
+const startBrainCalc = () => {
+  runEngine(rules, generateRound);
+};
+
+export default startBrainCalc;
