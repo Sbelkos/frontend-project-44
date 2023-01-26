@@ -39,3 +39,10 @@
 ``` brain-progression ```
 ##### Presentation Asciinema:
 [![asciicast](https://asciinema.org/a/554638.svg)](https://asciinema.org/a/554638)
+
+### 4. Brain-prime
+
+##### Starting the game:
+``` brain-prime ```
+##### Presentation Asciinema:
+[![asciicast](https://asciinema.org/a/554647.svg)](https://asciinema.org/a/554647)
