@@ -4,9 +4,31 @@
 ### CodeClimate status:
 [![Maintainability](https://api.codeclimate.com/v1/badges/6d0a392932e78a296ca0/maintainability)](https://codeclimate.com/github/Sbelkos/frontend-project-44/maintainability)
 
+## Games
+***
+
 # Brain-games
-Hi, here is a asciinema:
+
+### 1. Brain-even
+
+##### Starting the game:
+``` brain-even ```
 
 ##### Presentation Asciinema:
-[![asciicast](https://asciinema.org/a/Tgh8YRYp1Qtz6oCWhQyLhrQwc)](https://asciinema.org/a/Tgh8YRYp1Qtz6oCWhQyLhrQwc)
+[![asciicast](https://asciinema.org/a/554594.svg)](https://asciinema.org/a/554594)
+
 ***
+
+### 2. Brain-calc
+
+##### Starting the game:
+``` brain-calc ```
+##### Presentation Asciinema:
+[![asciicast](https://asciinema.org/a/554590.svg)](https://asciinema.org/a/554590)
+
+### 3. Brain-gcd
+
+##### Starting the game:
+``` brain-gcd ```
+##### Presentation Asciinema:
+[![asciicast](https://asciinema.org/a/554591.svg)](https://asciinema.org/a/554591)
