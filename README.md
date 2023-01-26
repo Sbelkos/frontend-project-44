@@ -32,3 +32,10 @@
 ``` brain-gcd ```
 ##### Presentation Asciinema:
 [![asciicast](https://asciinema.org/a/554591.svg)](https://asciinema.org/a/554591)
+
+### 4. Brain-progression
+
+##### Starting the game:
+``` brain-progression ```
+##### Presentation Asciinema:
+[![asciicast](https://asciinema.org/a/554638.svg)](https://asciinema.org/a/554638)
