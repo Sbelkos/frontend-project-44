@@ -1,6 +1,5 @@
 import runEngine from '../index.js';
-
-import getRandomNumber from '../randomNumberGeneratre.js';
+import getRandomNumber from '../getRandomInRange.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
